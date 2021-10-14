@@ -58,7 +58,7 @@ public class AccountTests extends BaseTest{
     @Test
     void getAccountInfoWithAssertionsAfterTest() {
         Response response = given()
-                .header("Authorization","Bearer ed7328187fb5c0a24092507ce0415ab1a5f8f55c" )
+                .header("Authorization", "Bearer ed7328187fb5c0a24092507ce0415ab1a5f8f55c")
                 .log()
                 .method()
                 .log()
@@ -68,5 +68,4 @@ public class AccountTests extends BaseTest{
                 .prettyPeek();
         assertThat(response.jsonPath().get("data.url"), equalTo(username));
     }
-
 }
